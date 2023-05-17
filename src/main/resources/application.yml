@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stock?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      format_sql: true
+      show-sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
