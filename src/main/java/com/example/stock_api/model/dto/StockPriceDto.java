@@ -5,10 +5,7 @@ import com.example.stock_api.model.Indicators;
 import com.example.stock_api.model.Quote;
 import com.example.stock_api.model.Result;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.Arrays;
@@ -27,7 +24,7 @@ public class StockPriceDto {
   private List<Integer> close;
   private List<Integer> volume;
   private List<Integer> timestamp;
-  @JsonIgnore private int maxLen;
+  @JsonIgnore @EqualsAndHashCode.Exclude private int maxLen;
 
   public static StockPriceDto from(final ExternalStockPriceDto externalStockPriceDto) {
     Optional<Result> result =
