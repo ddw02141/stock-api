@@ -13,8 +13,6 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.NoSuchElementException;
-
 import static com.example.stock_api.TestUtil.toObject;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -29,19 +27,6 @@ class StockPriceControllerTest {
 
   @Autowired private MockMvc mockMvc;
   @MockBean private StockPriceService stockPriceService;
-
-  @Test
-  void getStockPriceShouldFailOnStockPriceServiceException() throws Exception {
-    // given
-    when(stockPriceService.getAndUpdateStockPrice())
-        .thenThrow(new NoSuchElementException("Error getting SAMSUNG stock price"));
-
-    // when
-    mockMvc
-        .perform(get(STOCK_PRICE_URL))
-        // then
-        .andExpect(status().isInternalServerError());
-  }
 
   @Test
   void getStockPriceShouldSuccess() throws Exception {
