@@ -8,5 +8,4 @@ import java.util.List;
 public class Result {
   private Indicators indicators;
   private List<Integer> timestamp;
-  private Meta meta;
 }

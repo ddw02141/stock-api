@@ -10,8 +10,3 @@ spring:
       ddl-auto: create
     properties:
       format_sql: true
-      show-sql: true
-
-logging.level:
-  org.hibernate.SQL: debug
-  org.hibernate.type: trace

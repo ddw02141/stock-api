@@ -5,8 +5,10 @@ import com.example.stock_api.model.Indicators;
 import com.example.stock_api.model.Quote;
 import com.example.stock_api.model.Result;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.Arrays;
@@ -16,6 +18,8 @@ import java.util.Optional;
 
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class StockPriceDto {
   private List<Integer> high;
   private List<Integer> low;

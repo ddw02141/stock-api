@@ -1,38 +1,34 @@
 package com.example.stock_api.model.entity;
 
 import com.example.stock_api.model.dto.StockPriceDto;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
-@Entity(name = "stock")
+@Entity
+@Table(name = "stock")
 @Embeddable
 @Builder
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class StockEntity {
-  @Id @GeneratedValue private Long id;
-
+  @Id private Integer timestamp;
   private Integer high;
   private Integer low;
   private Integer open;
   private Integer close;
   private Integer volume;
-  private Integer timestamp;
 
   public static List<StockEntity> from(final StockPriceDto stockPriceDto) {
-    if ( Objects.isNull(stockPriceDto) ) {
+    if (Objects.isNull(stockPriceDto)) {
       return Collections.emptyList();
     }
 
@@ -50,7 +46,7 @@ public class StockEntity {
         .toList();
   }
 
-  private static Integer getElement(List<Integer> list, int idx) {
+  private static <T> T getElement(List<T> list, int idx) {
     return list.size() > idx ? list.get(idx) : null;
   }
 }

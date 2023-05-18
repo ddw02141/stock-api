@@ -6,6 +6,5 @@ import java.util.List;
 
 @Data
 public class Indicators {
-  private List<Adjclose> adjclose;
   private List<Quote> quote;
 }

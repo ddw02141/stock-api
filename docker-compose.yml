@@ -5,7 +5,7 @@ services:
     container_name: mysql
     ports:
       - 3306:3306 # HOST:CONTAINER
-
+    environment:
       MYSQL_ROOT_PASSWORD: admin
     command:
       - --character-set-server=utf8mb4

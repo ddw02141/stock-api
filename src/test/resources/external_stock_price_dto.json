@@ -1,0 +1,117 @@
+{
+  "chart": {
+    "result": [
+      {
+        "meta": {
+          "currency": "KRW",
+          "symbol": "005930.KS",
+          "exchangeName": "KSC",
+          "instrumentType": "EQUITY",
+          "firstTradeDate": 946944000,
+          "regularMarketTime": 1684391429,
+          "gmtoffset": 32400,
+          "timezone": "KST",
+          "exchangeTimezoneName": "Asia/Seoul",
+          "regularMarketPrice": 66200.0,
+          "chartPreviousClose": 64200.0,
+          "priceHint": 2,
+          "currentTradingPeriod": {
+            "pre": {
+              "timezone": "KST",
+              "start": 1684362600,
+              "end": 1684368000,
+              "gmtoffset": 32400
+            },
+            "regular": {
+              "timezone": "KST",
+              "start": 1684368000,
+              "end": 1684389600,
+              "gmtoffset": 32400
+            },
+            "post": {
+              "timezone": "KST",
+              "start": 1684389600,
+              "end": 1684400400,
+              "gmtoffset": 32400
+            }
+          },
+          "dataGranularity": "1d",
+          "range": "5d",
+          "validRanges": [
+            "1d",
+            "5d",
+            "1mo",
+            "3mo",
+            "6mo",
+            "1y",
+            "2y",
+            "5y",
+            "10y",
+            "ytd",
+            "max"
+          ]
+        },
+        "timestamp": [
+          1683849600,
+          1684108800,
+          1684195200,
+          1684281600,
+          1684391429
+        ],
+        "indicators": {
+          "quote": [
+            {
+              "close": [
+                64100.0,
+                64500.0,
+                65400.0,
+                65000.0,
+                66200.0
+              ],
+              "high": [
+                64600.0,
+                64600.0,
+                65900.0,
+                65900.0,
+                66200.0
+              ],
+              "open": [
+                63700.0,
+                64100.0,
+                65800.0,
+                65900.0,
+                66000.0
+              ],
+              "low": [
+                63600.0,
+                63900.0,
+                65300.0,
+                64800.0,
+                65700.0
+              ],
+              "volume": [
+                8693913,
+                8172021,
+                12334657,
+                10745504,
+                14431704
+              ]
+            }
+          ],
+          "adjclose": [
+            {
+              "adjclose": [
+                64100.0,
+                64500.0,
+                65400.0,
+                65000.0,
+                66200.0
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "error": null
+  }
+}
